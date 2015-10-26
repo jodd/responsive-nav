@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+icon(glyph)
+    content lookup('icon-' + glyph) || glyph
+    speak none
+    font-style normal
+    font-weight normal
+    font-variant normal
+    text-transform none
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+// Variables
+orange = hsl(30, 100, 48)
+breakpoint = 'min-width: 40em' // 768px
+
+html
+    font-size 16px
+    line-height 1.5
+    color grey
+
+body
+    margin 0 auto
+    padding 0 5%
+    max-width 900px
+
+header
+    position relative
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+/* Multi level nav
+   -------------------------------------------------------------------------- */
+[href^="#nav"]
+    display inline-block
+    color white
+    background-color orange
+    text-decoration none
+    padding 0 .3rem
+    &:focus, &:hover
+        background-color lighten(orange, 20%)
+    &:before
+        icon "☰"
+        font-size 3rem
+        line-height 1
+    /* Breakpoint 1 --------------------------------------------------------- */
+    @media only screen and ({breakpoint})
+        display none
+
+nav
+    font-size 1.25rem
+    display none
+    position absolute
+    top 100%
+    left 4rem
+    width 50%
+    margin-top -3rem
+    z-index 200
+    opacity 1
+    transition opacity .3s,
+        transform .3s
+    &.is-hidden
+        opacity 0
+        transform scale(0.8, 0.8)
+    &[aria-hidden]
+        display block
+    &[aria-hidden="true"]
+        display none
+
+    ul
+        background-color orange
+        list-style none
+        margin 0
+        padding 0
+
+    li
+        position relative
+
+    a
+        display block
+        text-decoration none
+        padding .5em 1em
+        color white
+        background-color orange
+        &:focus, &:hover
+            background-color lighten(orange, 20%)
+
+    [aria-haspopup]
+        position relative
+        padding-right 3rem
+        &:after
+            icon "▼"
+            font-size 1rem
+            line-height 1
+            position absolute
+            right 1rem
+            bottom 50%
+            transform translateY(50%)
+
+    a + ul
+        white-space nowrap
+        &[aria-hidden="true"]
+            display none
+
+    /* Breakpoint 1 --------------------------------------------------------- */
+    @media only screen and ({breakpoint})
+        position static
+        width auto
+        margin 0
+
+        > ul > li
+            display inline-block
+
+        a + ul
+            position absolute
+            top 100%
+            left 0
+            z-index 1
+            opacity 1
+            transition opacity .3s,
+                transform .3s
+            &[aria-hidden="true"]
+                display block
+                visuallyhidden(true)
+            &.is-hidden
+                opacity 0
+                transform translateY(21px)
+
+            [aria-haspopup]:after
+                icon "►"
+
+            a + ul
+                top 0
+                left 100%
+                &.is-hidden
+                    transform translate(21px, 0)
+
+            .no-js &
+                display none

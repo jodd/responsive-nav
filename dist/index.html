@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Exemple de menu de navigation responsive (hamburger)</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Exemple de menu de navigation responsive (hamburger)</h1>
+        <a href="#navigation"><span class="visuallyhidden">Menu de navigation</span></a>
+        <nav id="navigation" class="Nav" role="navigation">
+            <ul>
+                <li><a href="#">Menu item 1</a></li>
+                <li>
+                    <a href="#">Menu item 2</a>
+                    <ul aria-label="submenu" aria-hidden="true">
+                        <li><a href="#">Menu item 2.1</a></li>
+                        <li>
+                            <a href="#">Menu item 2.2</a>
+                            <ul aria-label="submenu" aria-hidden="true">
+                                <li><a href="#">Menu item 2.2.1</a></li>
+                                <li><a href="#">Menu item 2.2.2</a></li>
+                                <li><a href="#">Menu item 2.2.3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Menu item 2.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu item 3</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--
+    <script src="/jspm_packages/system.js"></script>
+    <script src="/config.js"></script>
+    <script>
+        System.import('./app');
+    </script>
+ -->
+    <script src="build.js"></script>
+
+</body>
+
+</html>
