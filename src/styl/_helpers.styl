@@ -73,7 +73,7 @@
 }
 
 
-/* Mixin version
+/* Mixins
    ========================================================================== */
 visuallyhidden(focusable = false)
     border 0
@@ -93,3 +93,14 @@ visuallyhidden(focusable = false)
             overflow visible
             position static
             width auto
+
+icon(glyph)
+    content lookup('icon-' + glyph) || glyph
+    speak none
+    font-style normal
+    font-weight normal
+    font-variant normal
+    text-transform none
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
