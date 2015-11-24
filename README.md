@@ -4,7 +4,7 @@
 - plusieurs niveaux
 - transitions CSS
 
-## [Demo](http://jodd.net)
+## [Demo](http://jodd.net/2015/10/22/responsive-nav.html)
 
 ## Ressources
 
