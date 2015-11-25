@@ -50,7 +50,7 @@ header
     position absolute
     top 100%
     left 4rem
-    width 50%
+    width 80%
     margin-top -3rem
     z-index 200
     opacity 1
@@ -78,9 +78,8 @@ header
         text-decoration none
         padding .5em 1em
         color text-color
-        background-color bg-color
         &:focus, &:hover
-            background-color lighten(bg-color, 30%)
+            background-color alpha(white, .2)
 
     [aria-haspopup]
         position relative
@@ -95,6 +94,7 @@ header
             transform translateY(50%)
 
     a + ul
+        background-color alpha(black, .05)
         &[aria-hidden="true"]
             display none
 
@@ -108,14 +108,15 @@ header
             display inline-block
 
         a + ul
+            background-color bg-color
             white-space nowrap
             position absolute
             top 100%
             left 0
             z-index 1
             opacity 1
-            transition opacity .3s,
-                transform .3s
+            transition opacity .2s,
+                transform .2s
             &[aria-hidden="true"]
                 display block
                 visuallyhidden(true)
