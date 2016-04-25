@@ -18,6 +18,7 @@ var $D = $(document);
 /* getTransDuration --------------------------------------------------------- */
 // Return the CSS transition duration of a property on an element or null
 function getTransDuration(element, property) {
+    if ($(element).css('transition-property') === undefined) { return null }
     var props = $(element).css('transition-property').split(',');
     var durations = $(element).css('transition-duration').split(',');
     var index = $.inArray(property, props);
