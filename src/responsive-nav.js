@@ -44,7 +44,7 @@ constructor(element, options) {
     this.$menu = this.$el.children('ul:first');
     this.$submenus = this.$menu.find('ul').addClass(this.options.hiddenClassname);
     this.$submenuLinks = this.$submenus.prev('a').attr('aria-haspopup', true);
-    this.$button = $('a[href=#' + this.el.id + ']')
+    this.$button = $('a[href="#' + this.el.id + '"]')
         .attr({
             'role': 'button',
             'aria-controls': this.el.id,
