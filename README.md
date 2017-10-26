@@ -1,12 +1,12 @@
-# Menu de navigation responsive (hamburger)
+# Responsive navigation menu
 
-- navigation au clavier (tab)
-- plusieurs niveaux
-- transitions CSS
+- keyboard support
+- multiple levels
+- smooth CSS transitions
 
-## [Demo](http://jodd.net/2015/10/22/responsive-nav.html)
+[Codepen demo](https://codepen.io/jod/pen/Kdoxep)
 
-## Ressources
+## Resources
 
 - [Progressive Hamburger](http://heydonworks.com/practical_aria_examples/#hamburger)
 - [Responsive Patterns](https://bradfrost.github.io/this-is-responsive/patterns.html#navigation)
